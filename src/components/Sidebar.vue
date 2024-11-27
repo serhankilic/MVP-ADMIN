@@ -60,35 +60,30 @@ export default {
     color: black;
     transition: all 0.5s ease; /* Animasyon */
     overflow: hidden;
+    background-color: #1a2b4b;
 }
 
 .side-menu.expanded {
     width: 300px; /* Genişletilmiş genişlik */
-    background-color: #c6e7ff;
     .toggle-button {
         justify-content: flex-end;
         padding-right: 30px;
     }
-    .side-menu ul {
+    ul {
         align-items: flex-start;
+        width: 100%;
+        margin-left: 10px;
         li {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
             a {
-                align-items: center;
-                cursor: pointer;
-                font-size: 20px;
-                font-weight: 500;
-                color: lightgray;
-                transition: 0.3s all ease;
-
-                .iconify {
-                    font-size: 32px;
-                    color: dimgray;
-                    transition: 0.3s all ease;
-                    margin-right: 15px;
-                }
+                color: #f4e9cd;
+                margin: 0;
+                margin-left: 17px;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+        li:hover {
+            a {
+                color: #b08beb;
             }
         }
     }
@@ -104,70 +99,64 @@ export default {
     border: none;
     text-align: left;
     cursor: pointer;
+    transition: 0.3s all ease;
+    span {
+        padding: 10px;
+        .icon {
+            font-size: 36px;
+            color: #f4e9cd;
+            transition: 0.3s all ease;
+        }
+    }
+}
+.toggle-button:hover {
+    background-color: #0e192e;
     span {
         .icon {
-            font-size: 30px;
+            color: #b08beb;
         }
     }
 }
 
 .side-menu ul {
     height: 90%;
-    margin: 0 auto;
+
     list-style: none;
-    max-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 25rem;
+    padding-top: 1rem;
+    align-items: center;
+
     li {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        width: 100%;
+        transition: 0.3s all ease-in-out;
         a {
+            margin: auto;
+            display: flex;
             padding: 12px 0;
-            align-items: center;
+            align-content: center;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 500;
             color: dimgray;
             transition: 0.3s all ease;
             .iconify {
-                font-size: 32px;
-                color: dimgray;
+                font-size: 36px;
+                color: #f4e9cd;
                 transition: 0.3s all ease;
-            }
-        }
-        a:hover {
-            color: black;
-            .iconify {
-                color: black;
+                margin: 0 auto;
             }
         }
     }
-}
-html.dark {
-    .side-menu {
-        background-color: #666565;
-    }
-    .side-menu ul {
-        li {
-            a {
-                color: silver;
-                transition: 0.3s all ease;
-                .iconify {
-                    font-size: 32px;
-                    color: silver;
-                    transition: 0.3s all ease;
-                }
-            }
-            a:hover {
-                color: white;
-                .iconify {
-                    color: white;
-                }
-            }
+    li:hover {
+        background-color: #0e192e;
+        .iconify {
+            color: #b08beb;
         }
     }
 }
