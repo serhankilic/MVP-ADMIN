@@ -1,7 +1,8 @@
-<script setup lang="ts">
-import Sidebar from '~/src/components/Sidebar.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <Sidebar />
+    <div class="container">
+        <Sidebar />
+        <Deneme />
+    </div>
 </template>

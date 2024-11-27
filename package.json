@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.8",
+    "daisyui": "^4.12.14",
     "prettier": "3.3.3"
   }
 }

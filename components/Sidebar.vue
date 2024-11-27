@@ -27,7 +27,17 @@ export default {
                 {
                     icon: 'material-symbols:home-outline',
                     text: 'Anasayfa',
-                    link: 'product',
+                    link: '',
+                },
+                {
+                    icon: 'material-symbols:schema-outline',
+                    text: 'Log',
+                    link: 'log',
+                },
+                {
+                    icon: 'material-symbols:bookmark-manager-outline-sharp',
+                    text: 'İçerik Yönetim',
+                    link: 'content',
                 },
                 {
                     icon: 'material-symbols:person',
@@ -72,13 +82,15 @@ export default {
     ul {
         align-items: flex-start;
         width: 100%;
-        margin-left: 10px;
         li {
+            padding-left: 10px;
             a {
                 color: #f4e9cd;
                 margin: 0;
                 margin-left: 17px;
                 transition: 0.3s all ease-in-out;
+                font-size: 24px;
+                white-space: nowrap;
             }
         }
         li:hover {
@@ -120,10 +132,10 @@ export default {
 
 .side-menu ul {
     height: 90%;
-
     list-style: none;
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     justify-content: flex-start;
     align-items: center;
     padding-top: 1rem;
