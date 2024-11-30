@@ -10,6 +10,7 @@
 .content-area {
     display: flex;
     flex-direction: row;
+    background-color: #f4e9cd;
     .sidebar {
         position: relative;
         height: 100vh;
