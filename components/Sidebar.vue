@@ -1,18 +1,10 @@
 <template>
     <aside>
-        <div :class="['side-menu', { expanded: isExpanded }]">
-            <button @click="toggleMenu" class="toggle-button">
-                <span v-if="isExpanded">
-                    <Icon name="material-symbols:close-rounded" class="icon"
-                /></span>
-                <span v-else
-                    ><Icon name="material-symbols:menu-open" class="icon"
-                /></span>
-            </button>
+        <div class="side-menu">
             <ul>
                 <li v-for="item in menuItems" :key="item.text">
                     <a :href="item.link"><Icon :name="item.icon"></Icon></a>
-                    <a v-if="isExpanded" :href="item.link">{{ item.text }}</a>
+                    <a :href="item.link">{{ item.text }}</a>
                 </li>
             </ul>
         </div>
@@ -52,33 +44,21 @@ export default {
             ],
         }
     },
-    methods: {
-        toggleMenu() {
-            this.isExpanded = !this.isExpanded
-        },
-    },
 }
 </script>
 <style>
 .side-menu {
     position: relative;
     top: 0;
-    left: 0;
-    min-height: 100vh;
-    width: 80px;
+    left: 20px;
+    border-radius: 25px;
+    min-height: 90%;
+    width: 300px;
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     color: black;
     transition: all 0.5s ease; /* Animasyon */
     overflow: hidden;
     background-color: #1a2b4b;
-}
-
-.side-menu.expanded {
-    width: 300px; /* Genişletilmiş genişlik */
-    .toggle-button {
-        justify-content: flex-end;
-        padding-right: 30px;
-    }
     ul {
         align-items: flex-start;
         width: 100%;
@@ -139,8 +119,7 @@ export default {
     justify-content: flex-start;
     align-items: center;
     padding-top: 1rem;
-    align-items: center;
-
+    margin-top: 10rem;
     li {
         display: flex;
         justify-content: flex-start;
@@ -148,7 +127,6 @@ export default {
         width: 100%;
         transition: 0.3s all ease-in-out;
         a {
-            margin: auto;
             display: flex;
             padding: 12px 0;
             align-content: center;

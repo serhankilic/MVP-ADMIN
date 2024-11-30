@@ -12,6 +12,9 @@
     flex-direction: row;
     .sidebar {
         position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
     }
 }
 </style>
