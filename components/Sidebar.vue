@@ -95,7 +95,7 @@ export default {
         }
         li:hover {
             a {
-                color: #b08beb;
+                color: white;
             }
         }
     }
@@ -166,7 +166,7 @@ export default {
         }
     }
     li:hover {
-        background-color: #0e192e;
+        background-color: #1a2f56;
         .iconify {
             color: #b08beb;
         }
